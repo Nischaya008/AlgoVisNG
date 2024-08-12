@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Searching Algorithms Visualizer</title>
+        <link rel="stylesheet" href="style4.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!-- Browser Favicon (16x16) -->
+        <link rel="icon" href="Logo.png" sizes="16x16" type="image/png">
+
+        <!-- Taskbar Shortcut Icon (32x32) -->
+        <link rel="icon" href="Logo.png" sizes="32x32" type="image/png">
+
+        <!-- Desktop Shortcut Icon (96x96) -->
+        <link rel="icon" href="Logo.png" sizes="96x96" type="image/png">
+
+        <!-- Additional icons for various devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="Logo.png">
+        <link rel="icon" type="image/x-icon" href="Logo.png">
+        <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+        
+    </head>
+    <body>
+        <div class="wallpaper"></div>
+        <a href="javascript:history.back()" class="back-icon">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        
+        <span class="main-head">
+            Searching Algorithms
+          </span>
+        <div class="controls">
+            <button id="generateArray">Generate Array</button>
+            <label for="arraySize" class="slider-name">Size of Array :-</label>
+            <input type="range" id="arraySize" min="5" max="50" value="20">
+            <span id="arraySizeValue">20</span>
+            <label for="speed" class="slider-name">Speed of Algorithm:-</label>
+            <input type="range" id="speed" min="1" max="3" value="2" style="cursor: pointer;">
+            <span id="speedValue">2</span>
+            <button id="refresh">Refresh</button>
+        </div>
+    
+        <div id="visualizer-space"></div>
+    
+        <div class="algorithm-buttons">
+            <button id="linearSearch">Linear Search</button>
+            <button id="binarySearch">Binary Search</button>
+            <button id="ternarySearch">Ternary Search</button>
+            <button id="jumpSearch">Jump Search</button>
+            <button id="interpolationSearch">Interpolation Search</button>
+            <button id="exponentialSearch">Exponential Search</button>
+        </div>
+    
+        <script src="script3.js"></script>
+    </body>
+</html>
