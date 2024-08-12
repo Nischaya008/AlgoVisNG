@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.controls {
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
+#visualizer-space {
+    width: 80%;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    border: 2px solid #333;
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bar {
+    width: 100%;
+    margin: 0 1px;
+    background-color: #3498db;
+    transition: height 0.3s;
+}
+
+.algorithm-buttons {
+    margin-top: 20px;
+}
+
+.algorithm-buttons button {
+    margin: 0 5px;
+}
+.wallpaper{
+    /* Basic dimensions and centering */
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed; /* Keeps the background fixed */
+    position: fixed; /* Fixes the background position */
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* Dark mode colors and gradient */
+    background: #121212; /* Fallback for browsers that don't support gradients */
+    background: linear-gradient(
+        135deg,
+        #121212 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        #121212 50%,
+        #121212 75%,
+        #1a1a1a 75%,
+        #1a1a1a
+    );
+    background-size: 80px 80px; /* Adjusted to match the animation */
+
+    /* Animation */
+    animation: move 8s linear infinite; /* Adjusted to match the background-size */
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 80px 80px; /* Matches the background-size for a seamless loop */
+    }
+}
+.slider-name{
+    display: inline;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 20px;
+    margin-right:-5px;
+}
+#arraySizeValue , #speedValue{
+    margin-top: 20px;
+    margin-left: -12px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 20px;
+
+}
+.main-head{
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+    /* Clip Background Image */
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+}
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+button {
+    font: inherit;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #7f7f7f; /* Much darker gray background */
+    border: 0;
+    color: #f0f0f0; /* Light gray text */
+    border-radius: 0.5em;
+    font-size: 20px;
+    padding: 5px 10px;
+    box-shadow: inset 0 0.0625em 0 0 #6e6e6e, /* Darker gray */
+      0 0.0625em 0 0 #5e5e5e, /* Even darker gray */
+      0 0.125em 0 0 #4f4f4f, /* More darker gray */
+      0 0.25em 0 0 #404040, /* Darker dark gray */
+      0 0.3125em 0 0 #333333, /* Dark gray */
+      0 0.375em 0 0 #2a2a2a, /* Even darker gray */
+      0 0.425em 0 0 #1f1f1f, /* Very dark gray */
+      0 0.425em 0.5em 0 #141414; /* Almost black gray */
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+
+button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #6e6e6e, /* Adjusted for active state */
+      0 0.03em 0 0 #5e5e5e,
+      0 0.0625em 0 0 #4f4f4f,
+      0 0.125em 0 0 #404040,
+      0 0.125em 0 0 #333333,
+      0 0.2em 0 0 #2a2a2a,
+      0 0.225em 0 0 #1f1f1f,
+      0 0.225em 0.375em 0 #141414;
+}
+.back-icon {
+    position: fixed; /* Ensures the icon stays fixed at the top left when scrolling */
+    top: 20px; /* Distance from the top of the page */
+    left: 20px; /* Distance from the left of the page */
+    z-index: 1000; /* Ensures it's above other elements */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+.back-icon i {
+    font-size: 30px; /* Adjusts icon size */
+    color: white; /* Icon color */
+}
